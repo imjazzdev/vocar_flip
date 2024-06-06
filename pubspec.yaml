@@ -41,6 +41,9 @@ dependencies:
   flutter_launcher_icons:
   audioplayers:
   url_launcher: 
+  video_player:
+  flick_video_player:
+
 
 flutter_icons:
   image_path: "assets/image/icon-logo.png"
@@ -76,6 +79,7 @@ flutter:
     - assets/image/tkb/
     - assets/image/pariwisata/
 
+    - assets/video/
     - assets/audio/
     - assets/3d/
     

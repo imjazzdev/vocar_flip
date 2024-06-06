@@ -66,13 +66,13 @@ class HomePage extends StatelessWidget {
                         //     SnackBar(content: Text('In development')));
                       },
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 23),
+                        padding: const EdgeInsets.only(bottom: 20),
                         child: Image.asset(
                             'assets/image/icon-menu-flipbook-tkb.png'),
                       ),
                     ),
                     Positioned(
-                      right: 37,
+                      right: 25,
                       child: InkWell(
                         onTap: () {
                           Navigator.push(
@@ -106,13 +106,13 @@ class HomePage extends StatelessWidget {
                         //     SnackBar(content: Text('In development')));
                       },
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 15),
+                        padding: const EdgeInsets.only(bottom: 20),
                         child: Image.asset(
                             'assets/image/icon-menu-flipbook-pariwisata.png'),
                       ),
                     ),
                     Positioned(
-                      left: 25,
+                      left: 30,
                       child: InkWell(
                         onTap: () {
                           Navigator.push(

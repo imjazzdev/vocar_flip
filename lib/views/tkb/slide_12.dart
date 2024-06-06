@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vocar_flip/views/k3lh/slide_3.dart';
+import 'package:vocar_flip/views/tkb/slide_13.dart';
 
 class TKBSlide12 extends StatelessWidget {
   const TKBSlide12({super.key});
@@ -13,6 +14,12 @@ class TKBSlide12 extends StatelessWidget {
         onPanUpdate: (dis) {
           if (dis.delta.dx > 0) {
             Navigator.pop(context);
+          } else if (dis.delta.dx < 0) {
+            Navigator.push(
+                context,
+                PageTransition(
+                    type: PageTransitionType.rightToLeftWithFade,
+                    child: TKBSlide13()));
           }
         },
         child: SafeArea(

@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:video_player/video_player.dart';
 import 'package:vocar_flip/views/k3lh/slide_3.dart';
 import 'package:vocar_flip/views/pariwisata/slide_8.dart';
 import 'package:vocar_flip/views/tkb/slide_3.dart';
+import 'package:flick_video_player/flick_video_player.dart';
 
-class PariwisataSlide7 extends StatelessWidget {
+class PariwisataSlide7 extends StatefulWidget {
   const PariwisataSlide7({super.key});
+
+  @override
+  State<PariwisataSlide7> createState() => _PariwisataSlide7State();
+}
+
+class _PariwisataSlide7State extends State<PariwisataSlide7> {
+  late FlickManager flickManager;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    flickManager = FlickManager(
+        videoPlayerController:
+            VideoPlayerController.asset('assets/video/pariwisata-7.mp4'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +59,22 @@ class PariwisataSlide7 extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    launchUrl(Uri.parse(
-                        'https://drive.google.com/file/d/1wlv621_fYoz54b56RUVO-4xwFDQiPcha/view?usp=drive_link'));
+                    // launchUrl(Uri.parse(
+                    //     'https://drive.google.com/file/d/1wlv621_fYoz54b56RUVO-4xwFDQiPcha/view?usp=drive_link'));
+                    showDialog(
+                      context: context,
+                      builder: (context) => Center(
+                        child: Container(
+                          height: 200,
+                          margin: EdgeInsets.only(left: 10, right: 10),
+                          color: Colors.white,
+                          child: AspectRatio(
+                            aspectRatio: 16 / 9,
+                            child: FlickVideoPlayer(flickManager: flickManager),
+                          ),
+                        ),
+                      ),
+                    );
                   },
                   child: Container(
                     height: 180,

@@ -22,7 +22,7 @@ class K3lhSlide20 extends StatelessWidget {
               height: double.maxFinite,
               width: double.maxFinite,
               child: Image.asset(
-                'assets/image/k3lh/20.jpg',
+                'assets/image/halaman-exit.jpg',
                 fit: BoxFit.cover,
               ),
             ),
